@@ -1,10 +1,12 @@
 #  David Romanski
 #  JavaScript Exercises
 #  Created: 04/07/2020
+#  Updated: 04/09/2020
 #  Eloquent Javascript
 #  Chapter 3: Bean Counting
 #  Comments: Write a function that counts the numbers of Bs in a string
 #       Then write a function that counts the number of any character in a string
+#  Updated to include inputs and validation.
 
 def countChar(word, char):
   count = 0
@@ -13,14 +15,18 @@ def countChar(word, char):
       count += 1
   return count
 
+# Legacy code from the original problem. Not used.
 def countBs(word):
   return countChar(word, "B")
 
-test1 = "BBbbBB"
-test2 = "WWwwWW"
-key2 = "w"
+while True:
+	test = input("Please enter string to be searched: ")
+	if (len(test)>0):
+		break;
 
-print("Testing countBs with " + test1 + ". Count is: ", end ='')
-print(countBs(test1))
-print("Testing countChar with " + test2 + " using " + key2 + ". Count is: ", end = '')
-print(countChar(test2, key2))
+while True:
+	key = input("Please enter key (chr) to search for: ")
+	if (len(key) == 1):
+		break;
+
+print(countChar(test,key))
