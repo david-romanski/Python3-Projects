@@ -41,19 +41,20 @@ def loadWalkthrough():
 
 	'east',
    	'get sparkler',
-   	'south',
+#	'south',
 
 # ... and a clue to a hidden location behind the tent.
 
    	'west',
-   	'get jigsaw piece',
+   	'get jigsaw piece', # Score 1 point
     'southeast',
 	'get rucksack',
-	'examine crate',
-	'get key,device',
-	'examine rucksack',
-	'examine key',
-	'examine device',
+#	'examine crate',
+	'get key',
+	'get device',
+#	'examine rucksack',
+#	'examine key',
+#	'examine device',
 
 # The description of the rucksack is an allusion to "Curses", hinting that
 # the protagonist of "Jigsaw" is the same as the Meldrew heir in Graham's
@@ -67,7 +68,7 @@ def loadWalkthrough():
     'northwest',
 	'northeast',
 	'east',
-	'examine statue',
+#	'examine statue',
 
 # Grad Kaldecki's motto "felix qui potuit rerum cognoscere causas" means
 # "happy is he who is able to know the cause of things.  Ironic, because
@@ -94,8 +95,8 @@ def loadWalkthrough():
 	'down',
 	'enter pyramid',
 	'south',
-	'examine case',
-	'open case',
+#	'examine case',
+#	'open case',
 
 # Leave the case for later.  You appear to be trapped inside the pyramid,
 # so let's hope you've done everything from the prologue.
@@ -103,10 +104,10 @@ def loadWalkthrough():
 	'east',
 	'look under table',
 	'get jigsaw piece',
-	'examine it',
-	'examine table',
+#	'examine it',
+#	'examine table',
 	'clean table',
-	'examine board',
+#	'examine board',
 
 # Now some of the mysteries are reasonably clear: the game is going to
 # involve a jigsaw-piece-collecting exercise, with the end of the game on
@@ -122,6 +123,24 @@ def loadWalkthrough():
 # and the number of turns so far.
 
 	'put corner piece at a4',
+	'take a4',
+	'turn corner piece',
+	'put corner piece at a4',
+	'take a4',
+	'turn corner piece',
+	'put corner piece at a4',
+	'take a4',
+	'turn corner piece',
+	'put corner piece at a4',
+	'put centre piece at c2',
+	'take c2',
+	'turn centre piece',
+	'put centre piece at c2',
+	'take c2',
+	'turn centre piece',
+	'put centre piece at c2',
+	'take c2',
+	'turn centre piece',
 	'put centre piece at c2',
 	'get clock',
 	'turn hand to 59',
@@ -144,37 +163,28 @@ def loadWalkthrough():
 	'examine street',
 	'examine cafe',
 
-################################# TESTING ##################################
-	'turn hand to 59',
-	'press a4',
-	'press c2',
-	'examine device',
-	'examine street',
-	'examine cafe',
-################################# TESTING ##################################
-
 # It's June 1914, and you're in Sarajevo.  What could be more ominous?
 # And then Black enters.  Black is a strange character, partly villain,
 # and partly love-interest.  You'll find as you progress, that you are
 # doomed to trail around history in Black's wake, fixing the problems left
 # behind.  But you had better be polite to start with.
 
-#    'shake hands',
-#    'examine black',
-#    'z.z',
-#    'say no to black',
-#    'unlock dresser with key',
-#    'open dresser',
-#    'get jigsaw piece from dresser',
-#    'sketch horses',
-#    'ask black about sarajevo',
-#    'ask black about kaldecki',
-#    'ask black about archduke',
-#    'examine rifle',
-#    'turn safety off',
-#    'ask black about pyramid',
-#    'examine student',
-#    'z.z.z.z.z',
+    'shake hands',
+    'examine black',
+    'z.z',
+    'say no to black',
+    'unlock dresser with key',
+    'open dresser',
+    'get jigsaw piece from dresser',
+    'sketch horses',
+    'ask black about sarajevo',
+    'ask black about kaldecki',
+    'ask black about archduke',
+    'examine rifle',
+    'turn safety off',
+    'ask black about pyramid',
+    'examine student',
+    'z.z.z.z.z',
 
 # Black's plan is to assassinate the student, thus preventing World War I.
 # Might that not be a good thing?  Millions of men died in savage and
@@ -186,8 +196,8 @@ def loadWalkthrough():
 # and on the other, there is only one true version of history that must be
 # preserved at all costs.
 
-#    'shoot archduke',
-#    'z.z.z.z.z',
+    'shoot archduke',
+    'z.z.z.z.z',
 
 # The deed is done, history is safe, and you have a plot and some clues.
 # Black intends to improve history; you know however that this cannot
@@ -197,25 +207,35 @@ def loadWalkthrough():
 # mysterious realm called "the Land".  But without the device, you cannot
 # go there yet, and must resort to the clock.
 
-#    'turn clock to 1',
-#    'wait',
-#    'examine disc',
-#    'northwest',
-#    'get curious device',
-#    '[put the edge piece at c1]',
-#    'turn clock off',
-#    'turn clock to 59',
-#    'press c1',
+    'turn clock to 1',
+    'wait',
+    'examine disc',
+    'northwest',
+    'get curious device',
+    'put the edge piece at c1',
+    'take c1',
+    'turn edge piece',
+    'put the edge piece at c1',
+    'take c1',
+    'turn edge piece',
+    'put the edge piece at c1',
+    'take c1',
+    'turn edge piece',
+    'put the edge piece at c1',
+    'turn clock off',
+    'turn clock to 59',
+    'press c1',
 
 
 # CHAPTER 2: ICY CALM
 # -------------------
 
-#    'get times, note',
-#    'read times',
-#    'read note',
-#    'southwest',
-#    'north',
+    'get times, note',
+    'read times',
+    'read note',
+    'southwest',
+
+    'north',
 
 # You turned the clock off because you'll be spending more than an hour in
 # this time zone.  The note is addressed to "White", which must be you
@@ -224,22 +244,22 @@ def loadWalkthrough():
 # you have just collided with an iceberg.  Could it be that you are on
 # board the H.M.S. Titanic?
 
-#    'south',
-#    'east',
-#    'up',
-#    'read notice',
-#    'west',
-#    'get jacket',
-#    'wear jacket',
-#    'east',
-#    'down',
-#    'west',
-#    'south',
-#    'west',
-#    'north',
-#    'open box',
-#    'get syrup',
-#    'west',
+    'south',
+    'east',
+    'up',
+    'read notice',
+    'west',
+    'get jacket',
+    'wear jacket',
+    'east',
+    'down',
+    'west',
+    'south',
+    'west',
+    'north',
+    'open box',
+    'get syrup',
+    'west',
 
 # The Titanic appears to be sinking as expected, despite the calm of the
 # passengers and crew.  How could the course of history be affected?  If
@@ -248,61 +268,62 @@ def loadWalkthrough():
 # leaving the ship by time-travel, not by lifeboats, so you'd better find
 # someone to act as courier for you.
 
-#    '[repeatedly wait until Guggenheim gives you the letter]',
-#    'examine secret letter',
-#    'west',
-#    'examine ouija board',
-#    'say hello to miss shutes',
-#    'give secret letter to miss shutes',
-#    'look',
-#    'get jigsaw piece',
+#	'[repeatedly wait until Guggenheim gives you the letter]',
+	'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait',
+    'examine secret letter',
+    'west',
+    'examine ouija board',
+    'say hello to miss shutes',
+    'give secret letter to miss shutes',
+    'look',
+    'get jigsaw piece',
 
 # The jigsaw piece must be very big to have passed as a ouija board!  The
 # clue here is that anything square and coloured white or grey is probably
 # a jigsaw piece, so you had better be on the lookout.  Now you need to
 # find your way into Black's cabin:
 
-#    'east',
-#    'east',
-#    'up',
-#    'move chairs',
-#    "get boy's book",
-#    "read boy's book",
-#    'again',
-#    'get door key',
-#    'down',
-#    'south',
-#    'east',
-#    'north',
-#    'east',
-#    'remove jacket',
-#    'east',
-#    'say hello to captain smith',
-#    'ask captain smith about titanic',
-#    'ask captain smith about lifeboats',
-#    'unlock door with door key',
-#    'open door',
-#    'east',
-#    'get long barrelled key',
-#    'look under wardrobe',
-#    'read second note',
-#    'examine kaldecki detector',
-#    'spin it',
+    'east',
+    'east',
+    'up',
+    'move chairs',
+    "get boy's book",
+    "read boy's book",
+    'again',
+	'get key',
+	'down',
+	'south',
+	'east',
+	'north',
+	'east',
+	'remove jacket',
+	'east',
+	'say hello to captain smith',
+	'ask captain smith about titanic',
+	'ask captain smith about lifeboats',
+	'unlock door with key',
+	'open door',
+	'east',
+    'get long barrelled key',
+	'look under wardrobe',
+	'read second note',
+	'examine kaldecki detector',
+	'spin it',
 
 # The Kaldecki detector is a device that detects jigsaw pieces; it rings
 # the bell when you haven't found all the jigsaw pieces in the time zone.
 # Luckily, the missing piece is close at hand:
 
-#    'open window',
-#    'get jigsaw piece',
-#    'spin kaldecki detector',
+#  'open window',
+#   'get jigsaw piece',
+#   'spin kaldecki detector',
 
 # So there are no more to find here.  What about that towel you saw the
 # stewardess take away, the one with all the mathematics on it?
 
-#    'west',
-#    'stewardess, give me the towel',
-#    'examine towel',
+#	'west',
+#	'stewardess, give me the towel',
+#	'examine towel',
 
 # The towel tells you when and where the time window will open.  Remember
 # this information.  Now you must make sure that the secret letter gets to
@@ -312,16 +333,16 @@ def loadWalkthrough():
 # International Maritime Convention had agreed on the new prosign SOS -
 # but the radio operator on the Titanic sent both).
 
-#    'west',
-#    'up',
-#    'unlock door with long key',
-#    'open door',
-#    'wear jacket',
-#    'east',
-#    'examine charts',
-#    'dah.dit.dah.dit',
-#    'dah.dah.dit.dah',
-#    'dah.dit.dit',
+#	'west',
+#	'up',
+#	'unlock door with long key',
+#	'open door',
+#	'wear jacket',
+#	'east',
+#	'examine charts',
+#	'dah.dit.dah.dit',
+#	'dah.dah.dit.dah',
+#	'dah.dit.dit',
 
 # You have now saved history from disaster.  If you want to visit the Land
 # now, then go to the place written on the towel, wait for the right time
@@ -329,15 +350,33 @@ def loadWalkthrough():
 # there'll be plenty of time to visit the Land later in the game, so you
 # can escape using the clock instead:
 
-#    'turn clock on',
-#    'turn clock to 1',
-#    'wait',
-#    'northwest',
-#    '[put the edge piece at b1]',
-#    '[put the corner piece at a1]',
-#    'turn clock off',
-#    'turn clock to 59',
-#    'press a1',
+#	'turn clock on',
+#	'turn clock to 1',
+#	'wait',
+#	'northwest',
+#	'put the edge piece at b1',
+#	'take b1',
+#	'turn edge piece',    
+#	'put the edge piece at b1',
+#	'take b1',
+#	'turn edge piece',    
+#	'put the edge piece at b1',
+#	'take b1',
+#	'turn edge piece',    
+#	'put the edge piece at b1',
+#	'put the corner piece at a1',
+#	'take a1',
+#	'turn corner piece',
+#	'put the corner piece at a1',
+#	'take a1',
+#	'turn corner piece',
+#	'put the corner piece at a1',
+#	'take a1',
+#	'turn corner piece',
+#	'put the corner piece at a1',
+#	'turn clock off',
+#	'turn clock to 59',
+#	'press a1',
 
 
 # CHAPTER 3: AND ONE PERCENT LUCK
@@ -1702,6 +1741,8 @@ def loadWalkthrough():
 #input_box.submit()
 
 walkthrough = loadWalkthrough()
+
+print(len(walkthrough))
 
 print(len(walkthrough))
 for x in range(0, len(walkthrough)) :
