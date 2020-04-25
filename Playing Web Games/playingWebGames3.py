@@ -13,142 +13,130 @@ from selenium import webdriver
 import importlib
 
 import makingInput
-#moduleName = 'makingInput'
-#importlib.import_module(moduleName)
 
-# Using Chrome to access web
-driver = webdriver.Chrome();
+def testWordList(listWT, newFile) :
+# This def accepts a list of commands and the output file. It opens the game website and 
+# checks if the commands are valid.
 
-# Open the website
-driver.get('http://www.web-adventures.org/cgi-bin/webfrotz?s=Jigsaw')
+	# Using Chrome to access web
+	driver = webdriver.Chrome();
 
-# def loadWalkthrough():
-#	walkthrough = []
-#	file = open("jigsawWalkthrough.txt", "r")
-#	for line in file:
-#		line = line.replace('[', '')
-#		line = line.replace(']', '')
-#		# The walkthrough has spaces before commands, but no spaces before comments.
-#		# So I'm removing the comments
-#		if (line[0] == ' '):
-#			print(line)
-#			input = line.strip();
-#			walkthrough.append(input)
-#	print(len(walkthrough))
-#	file.close()
-#	return walkthrough
+	# Open the website
+	driver.get('http://www.web-adventures.org/cgi-bin/webfrotz?s=Jigsaw')
 
-#def createCommands():
-#	allChars = [
-#		'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-#		'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 
-#		'.', ',', ' ', 
-#		'0', '1', '2' , '3', '4', '5', '6', '7', '8', '9'
-#		]
+	for x in range(0, len(listWT)) :
+		if (listWT[x] == "") :
+			return
+		print("Checking " + listWT[x])
 
-#	walkthrough = []
-
-#	input = "";
-#	for char1 in range(0, len(allChars)):
-#		for char2 in range(0, len(allChars)):
-#			for char3 in range(0, len(allChars)):
-#				for char4 in range(0, len(allChars)):
-#					for char5 in range(0, len(allChars)):
-#						for char6 in range(0, len(allChars)):
-#							for char7 in range(0, len(allChars)):
-#								for char8 in range(0, len(allChars)):
-#									for char9 in range(0, len(allChars)):
-#										for char10 in range(0, len(allChars)):
-#											for char11 in range(0, len(allChars)):
-#												for char12 in range(0, len(allChars)):
-#													for char13 in range(0, len(allChars)):
-#														for char14 in range(0, len(allChars)):
-#															for char15 in range(0, len(allChars)):
-#																for char16 in range(0, len(allChars)):
-#																	for char17 in range(0, len(allChars)):
-#																		for char18 in range(0, len(allChars)):
-#																			for char19 in range(0, len(allChars)):
-#																				for char20 in range(0, len(allChars)):
-#																					input =  allChars[char1] 
-#																					input += allChars[char2] 
-#																					input += allChars[char3] 
-#																					input += allChars[char4] 
-#																					input += allChars[char5] 
-#																					input += allChars[char6]
-#																					input += allChars[char7]
-#																					input += allChars[char8]
-#																					input += allChars[char9]
-#																					input += allChars[char10]
-#																					input += allChars[char11]
-#																					input += allChars[char12]
-#																					input += allChars[char13]
-#																					input += allChars[char14]
-#																					input += allChars[char15]
-#																					input += allChars[char16]
-#																					input += allChars[char17]
-#																					input += allChars[char18]
-#																					input += allChars[char19]
-#																					input += allChars[char20]
-#																					walkthrough.append(input)
-##					print(input)
-
-#	print(walkthrough)
-#	print(len(walkthrough))
-
-#	for x in range (0, len(walkthrough)):
-#		# print("Test: " + str(x))
-#		walkthrough[x] = walkthrough[x].strip()
-
-#	walkthrough = list(dict.fromkeys(walkthrough))
-
-#	return walkthrough
-
-walkthrough = makingInput.getInputs()
-tempWT = []
-# print(len(walkthrough))
-
-for y in range(0,2):
-	for x in range(0, len(walkthrough)) :
-	#	descrip = driver.find_element_by_tag_name('(text)')
-	#	descrip = driver.findElements(By.)
-	#	descrip = driver.findElement(By.id(<tr>));
-	#	print(len(descrip))
-	#	for e in descrip:
-	#		print('0: ' + descrip[0].text)
-	#		print('1: ' + descrip[1].text)
-
-		print(str(x) + "/" + (str(len(walkthrough))) + ": test[" + walkthrough[x] + "]test")
+		# Submit command into game
+		print(str(x) + "/" + (str(len(listWT))) + ": test[" + listWT[x] + "]test")
 		input_box = driver.find_element_by_name('a')
-		input_box.send_keys(walkthrough[x])
+		input_box.send_keys(listWT[x])
 		input_box.submit()
-#		time.sleep(2)
 
+		# Collect output and determine if command is valid
 		descrip = driver.find_elements_by_tag_name('td')
-#		print(descrip[0].text)
-#		print(descrip[1].text)
-
 		output = descrip[1].text.splitlines()
-#		print(output)
-		print(str(len(output)) + " " + walkthrough[x] + ': ' + output[len(output)-1])
+		print(str(len(output)) + " " + listWT[x] + ': ' + output[len(output)-1])
 		if (output[len(output)-1] != "That's not a verb I recognise."):
 			if (output[len(output)-1] != "You seem to want to talk to someone, but I can't see whom."):
-				print("Valid input with " + walkthrough[x])
-				tempWT.append(walkthrough[x])
-				print(tempWT)
-	#		print(len(output))
-	#		print(output[4])
-	#		print('2: ' + descrip[2].text)
+				print("Valid input with " + listWT[x])
+				# tempWT.append(walkthrough[x])
+				# print(tempWT)
+				#if command is valid save to new file
+				newFile.write(listWT[x] + '\n')
+			else :
+				print(listWT[x] + " isn't valid.")
+		else:
+			print(listWT[x] + " isn't valid.")
 
-	#	print(str(x) + "/" + (str(len(walkthrough))) + ": test[" + walkthrough[x] + "]test")
-	#	input_box = driver.find_element_by_name('a')
-	#	input_box.send_keys(walkthrough[x])
-	#	input_box.submit()
-	walkthrough = tempWT
-	tempWT = []	
-	print(walkthrough)
+	# Finish up and check score!
+	input_box = driver.find_element_by_name('a')
+	input_box.send_keys('score')
+	input_box.submit()
 
-input_box = driver.find_element_by_name('a')
-input_box.send_keys('score')
-input_box.submit()
+###################################################################################################
+# Main Menu
+# Just a q&d menu to see if you want to check 1 word, 2 words... up to ?? words
+###################################################################################################
+print("(1) Check first words")
+print("(2) Check first and second words")
 
-updateInputs(walkthrough)
+try:
+	selection = int(input("Enter election to begin> "))
+	if (selection = 1)
+		load file firstWordPoss
+	if (selection == 2) :
+		load file firstWordPoss
+		load file secondWordPoss
+
+
+
+
+###################################################################################################
+# This program will check 1000 commands at a time. That means it will load 1000 
+# commands, store them in a list, and test them on the website. The reason for 
+# 1000 commands is to save on resources and also because the game is time, and 
+# after a number of valid commands that don't progressive the game, the game will end.
+###################################################################################################
+
+###################################################################################################
+# We are currently working on getting the first point. Per the walkthrough we need to have the
+# AI do the following moves:
+# 	'east',
+#  	'get sparkler',
+#  	'south',
+#  	'west',
+#  	'get jigsaw piece', # Score 1 point
+#
+# I think we can get buy with:
+# 	'e',
+#  	'get all',
+#  	'w',
+#  	'get all', # Score 1 point
+#
+# I wonder what the AI will find...
+###################################################################################################
+
+# This check only the first word.
+try:
+	f = open("inputList.txt", "x")
+	print("No file found. Creating new input file...")
+	makingInput.createListFirstWord(f)
+	f.close()
+except FileExistsError:
+	print("File already exists.")
+
+print("Loading file...")
+oldFile = open("inputList.txt", "r")
+newFile = open("inputList2.txt", "w")
+
+# Pull 1000 commands
+listWT = makingInput.loadWalkthrough(oldFile)
+
+
+
+while (len(listWT) > 0) :
+	testWordList(listWT, newFile)
+	# Pull another 1000 commands
+	listWT = makingInput.loadWalkthrough(oldFile)
+
+newFile.close()
+oldFile.close()
+
+#####################################
+
+# This checks first and second word
+# open first word file
+# open second word file
+# grab 1000 first words
+# grab 1000 second words
+# check first + second
+# keep grabbing 1000 of second word
+# keep checking first + second word
+# grab next 1000 first words
+# grab and check all second words
+# keep grabing first words and second words and checking them
+# close all files
+#####################################
