@@ -49,12 +49,12 @@ def loadWalkthrough():
    	'get jigsaw piece', # Score 1 point
     'southeast',
 	'get rucksack',
-#	'examine crate',
+	'examine crate',
 	'get key',
 	'get device',
-#	'examine rucksack',
-#	'examine key',
-#	'examine device',
+	'examine rucksack',
+	'examine key',
+	'examine device',
 
 # The description of the rucksack is an allusion to "Curses", hinting that
 # the protagonist of "Jigsaw" is the same as the Meldrew heir in Graham's
@@ -68,7 +68,7 @@ def loadWalkthrough():
     'northwest',
 	'northeast',
 	'east',
-#	'examine statue',
+	'examine statue',
 
 # Grad Kaldecki's motto "felix qui potuit rerum cognoscere causas" means
 # "happy is he who is able to know the cause of things.  Ironic, because
@@ -95,8 +95,8 @@ def loadWalkthrough():
 	'down',
 	'enter pyramid',
 	'south',
-#	'examine case',
-#	'open case',
+	'examine case',
+	'open case',
 
 # Leave the case for later.  You appear to be trapped inside the pyramid,
 # so let's hope you've done everything from the prologue.
@@ -104,10 +104,10 @@ def loadWalkthrough():
 	'east',
 	'look under table',
 	'get jigsaw piece',
-#	'examine it',
-#	'examine table',
+	'examine it',
+	'examine table',
 	'clean table',
-#	'examine board',
+	'examine board',
 
 # Now some of the mysteries are reasonably clear: the game is going to
 # involve a jigsaw-piece-collecting exercise, with the end of the game on
@@ -207,24 +207,24 @@ def loadWalkthrough():
 # mysterious realm called "the Land".  But without the device, you cannot
 # go there yet, and must resort to the clock.
 
-    'turn clock to 1',
-    'wait',
-    'examine disc',
-    'northwest',
-    'get curious device',
-    'put the edge piece at c1',
-    'take c1',
-    'turn edge piece',
-    'put the edge piece at c1',
-    'take c1',
-    'turn edge piece',
-    'put the edge piece at c1',
-    'take c1',
-    'turn edge piece',
-    'put the edge piece at c1',
-    'turn clock off',
-    'turn clock to 59',
-    'press c1',
+	'turn clock to 1',
+	'wait',
+	'examine disc',
+	'northwest',
+	'get curious device',
+	'put the edge piece at c1',
+#	'take c1',
+	'turn edge piece',
+	'put the edge piece at c1',
+#	'take c1',
+	'turn edge piece',
+	'put the edge piece at c1',
+#	'take c1',
+	'turn edge piece',
+	'put the edge piece at c1',
+	'turn clock off',
+	'turn clock to 59',
+	'press c1',
 
 
 # CHAPTER 2: ICY CALM
@@ -269,7 +269,9 @@ def loadWalkthrough():
 # someone to act as courier for you.
 
 #	'[repeatedly wait until Guggenheim gives you the letter]',
-	'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait',
+	'wait', 'wait', 'wait', 'wait', 'wait',
+	'wait', 'wait', 'wait', 'wait', 'wait',
+	'wait', 'wait',
     'examine secret letter',
     'west',
     'examine ouija board',
@@ -314,16 +316,16 @@ def loadWalkthrough():
 # the bell when you haven't found all the jigsaw pieces in the time zone.
 # Luckily, the missing piece is close at hand:
 
-#  'open window',
-#   'get jigsaw piece',
-#   'spin kaldecki detector',
+	'open window',
+	'get jigsaw piece',
+	'spin kaldecki detector',
 
 # So there are no more to find here.  What about that towel you saw the
 # stewardess take away, the one with all the mathematics on it?
 
-#	'west',
-#	'stewardess, give me the towel',
-#	'examine towel',
+	'west',
+	'stewardess, give me the towel',
+	'examine towel',
 
 # The towel tells you when and where the time window will open.  Remember
 # this information.  Now you must make sure that the secret letter gets to
@@ -333,16 +335,16 @@ def loadWalkthrough():
 # International Maritime Convention had agreed on the new prosign SOS -
 # but the radio operator on the Titanic sent both).
 
-#	'west',
-#	'up',
-#	'unlock door with long key',
-#	'open door',
-#	'wear jacket',
-#	'east',
-#	'examine charts',
-#	'dah.dit.dah.dit',
-#	'dah.dah.dit.dah',
-#	'dah.dit.dit',
+	'west',
+	'up',
+	'unlock door with long key',
+	'open door',
+	'wear jacket',
+	'east',
+	'examine charts',
+	'dah.dit.dah.dit',
+	'dah.dah.dit.dah',
+	'dah.dit.dit',
 
 # You have now saved history from disaster.  If you want to visit the Land
 # now, then go to the place written on the towel, wait for the right time
@@ -350,33 +352,33 @@ def loadWalkthrough():
 # there'll be plenty of time to visit the Land later in the game, so you
 # can escape using the clock instead:
 
-#	'turn clock on',
-#	'turn clock to 1',
-#	'wait',
-#	'northwest',
-#	'put the edge piece at b1',
+	'turn clock on',
+	'turn clock to 1',
+	'wait',
+	'northwest',
+	'put the edge piece at b1',
 #	'take b1',
-#	'turn edge piece',    
-#	'put the edge piece at b1',
+	'turn edge piece',    
+	'put the edge piece at b1',
 #	'take b1',
-#	'turn edge piece',    
-#	'put the edge piece at b1',
+	'turn edge piece',    
+	'put the edge piece at b1',
 #	'take b1',
-#	'turn edge piece',    
-#	'put the edge piece at b1',
-#	'put the corner piece at a1',
-#	'take a1',
-#	'turn corner piece',
-#	'put the corner piece at a1',
-#	'take a1',
-#	'turn corner piece',
-#	'put the corner piece at a1',
-#	'take a1',
-#	'turn corner piece',
-#	'put the corner piece at a1',
-#	'turn clock off',
-#	'turn clock to 59',
-#	'press a1',
+	'turn edge piece',    
+	'put the edge piece at b1',
+	'put the corner piece at a1',
+	'take a1',
+	'turn corner piece',
+	'put the corner piece at a1',
+	'take a1',
+	'turn corner piece',
+	'put the corner piece at a1',
+	'take a1',
+	'turn corner piece',
+	'put the corner piece at a1',
+	'turn clock off',
+	'turn clock to 59',
+	'press a1',
 
 
 # CHAPTER 3: AND ONE PERCENT LUCK
@@ -390,28 +392,28 @@ def loadWalkthrough():
 # zone to see if you need to search for jigsaw pieces, and to spin it
 # after you pick up each jigsaw piece to see if there are any more.
 
-#    'examine device',
-#    'spin kaldecki detector',
-#    'open upper door',
-#    'open lower door',
-#    'down',
-#    'sketch mice',
-#    'north',
-#    'examine bell jar',
-#    'look under bell jar',
-#    'read typed note',
+    'examine device',
+    'spin kaldecki detector',
+    'open upper door',
+    'open lower door',
+    'down',
+    'sketch mice',
+    'north',
+    'examine bell jar',
+    'look under bell jar',
+    'read typed note',
 
 # It's 1928, and Alexander Fleming is about to discover penicillin.  With
 # your help, that is.
 
-#    'south',
-#    'east',
-#    'up',
-#    'get certificate',
-#    'get jigsaw piece',
-#    'spin kaldecki detector',
-#    'search dishes',
-#    'get mouldy dish',
+    'south',
+    'east',
+    'up',
+    'get certificate',
+    'get jigsaw piece',
+    'spin kaldecki detector',
+    'search dishes',
+    'get mouldy dish',
 
 # Fleming should have come in by now and deposited his suitcase (if not,
 # wait a bit).  He doesn't appear to be a very observant man, as he's
@@ -419,14 +421,15 @@ def loadWalkthrough():
 # attention?  He would notice something as large as a suitcase in the
 # wrong place:
 
-#    'examine suitcase',
-#    'push suitcase east',
-#    'put dish on suitcase',
-#    '[wait until Fleming finds the mouldy dish]',
-#    '[wait until the disturbed air appears]',
-#    'press white button',
-#    'enter black ball',
-#    'z.z',
+	'examine suitcase',
+	'push suitcase east',
+	'put dish on suitcase',
+#	'[wait until Fleming finds the mouldy dish]',
+	'wait', 'wait', 'wait', 'wait', 'wait',
+#	'[wait until the disturbed air appears]',
+	'press white button',
+	'enter black ball',
+	'z.z',
 
 # And now you're in the Land.  The Land is a four-by-four grid of
 # locations, each one corresponding to a square on the jigsaw board.  The
@@ -435,12 +438,12 @@ def loadWalkthrough():
 # moment, though it's mostly harmless to explore (but if you go southeast,
 # then east three times, you'll regret it).
 
-#    'southeast',
-#    'southeast',
-#    'northwest',
-#    '[put centre piece at c3]',
-#    'turn clock to 59',
-#    'press b1',
+	'southeast',
+	'southeast',
+	'northwest',
+#	'[put centre piece at c3]',
+#	'turn clock to 59',
+#	'press b1',
 
 
 # CHAPTER 4: TEMPS PERDU
