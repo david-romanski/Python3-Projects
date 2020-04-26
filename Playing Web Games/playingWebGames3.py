@@ -11,7 +11,7 @@ import time
 import selenium
 from selenium import webdriver
 import importlib
-
+import winsound
 import makingInput
 
 def testWordList(listWT, newFile) :
@@ -39,37 +39,80 @@ def testWordList(listWT, newFile) :
 		descrip = driver.find_elements_by_tag_name('td')
 		output = descrip[1].text.splitlines()
 		print(str(len(output)) + " " + listWT[x] + ': ' + output[len(output)-1])
-		if (output[len(output)-1] != "That's not a verb I recognise."):
-			if (output[len(output)-1] != "You seem to want to talk to someone, but I can't see whom."):
-				print("Valid input with " + listWT[x])
-				# tempWT.append(walkthrough[x])
-				# print(tempWT)
-				#if command is valid save to new file
-				newFile.write(listWT[x] + '\n')
-			else :
-				print(listWT[x] + " isn't valid.")
-		else:
+
+		valid = True
+		if (output[len(output) - 1] == "That's not a verb I recognise."):
 			print(listWT[x] + " isn't valid.")
+			valid = False
+
+		if (output[len(output) - 1] == "You seem to want to talk to someone, but I can't see whom."):
+			print(listWT[x] + " isn't valid.")
+			valid = False
+
+		if (output[len(output) - 1] == "You can only do that to something animate.") :
+			print(listWT[x] + " isn't valid.")
+			valid = False
+
+		if (valid) :
+			print("Valid input with " + listWT[x])
+			# tempWT.append(walkthrough[x])
+			# print(tempWT)
+			#if command is valid save to new file
+			newFile.write(listWT[x] + '\n')
 
 	# Finish up and check score!
 	input_box = driver.find_element_by_name('a')
 	input_box.send_keys('score')
 	input_box.submit()
+####################################### end Test Word List ########################################
+
+def oneWordTest() :
+# This check only the first word.
+	try:
+		f = open("inputList.txt", "x")
+		print("No file found. Creating new input file...")
+		makingInput.createListFirstWord(f)
+		f.close()
+	except FileExistsError:
+		print("File already exists.")
+
+	print("Loading file...")
+	oldFile = open("inputList.txt", "r")
+	newFile = open("inputList2.txt", "w")
+	newFile.close()
+
+	# Pull 1000 commands
+	listWT = makingInput.loadWalkthrough(oldFile)
+
+
+
+	while (len(listWT) > 0) :
+		newFile = open("inputList2.txt", "a")
+		testWordList(listWT, newFile)
+		newFile.close()
+
+		# Pull another 1000 commands
+		listWT = makingInput.loadWalkthrough(oldFile)
+
+	newFile.close()
+	oldFile.close()
+
+#####################################end one Word Test ############################################
 
 ###################################################################################################
 # Main Menu
 # Just a q&d menu to see if you want to check 1 word, 2 words... up to ?? words
 ###################################################################################################
-print("(1) Check first words")
-print("(2) Check first and second words")
+#print("(1) Check first words")
+#print("(2) Check first and second words")
 
-try:
-	selection = int(input("Enter election to begin> "))
-	if (selection = 1)
-		load file firstWordPoss
-	if (selection == 2) :
-		load file firstWordPoss
-		load file secondWordPoss
+#try:
+#	selection = int(input("Enter election to begin> "))
+#	if (selection == 1)
+#		load file firstWordPoss
+#	if (selection == 2) :
+#		load file firstWordPoss
+#		load file secondWordPoss
 
 
 
@@ -99,39 +142,49 @@ try:
 # I wonder what the AI will find...
 ###################################################################################################
 
-# This check only the first word.
-try:
-	f = open("inputList.txt", "x")
-	print("No file found. Creating new input file...")
-	makingInput.createListFirstWord(f)
-	f.close()
-except FileExistsError:
-	print("File already exists.")
-
-print("Loading file...")
-oldFile = open("inputList.txt", "r")
-newFile = open("inputList2.txt", "w")
-
-# Pull 1000 commands
-listWT = makingInput.loadWalkthrough(oldFile)
-
-
-
-while (len(listWT) > 0) :
-	testWordList(listWT, newFile)
-	# Pull another 1000 commands
-	listWT = makingInput.loadWalkthrough(oldFile)
-
-newFile.close()
-oldFile.close()
-
-#####################################
+oneWordTest()
 
 # This checks first and second word
-# open first word file
-# open second word file
-# grab 1000 first words
-# grab 1000 second words
+#firstWordFile = open("inputList.txt", "r")
+#secondWordFile = open("secondWordList.txt", "r")
+#outputFile = open("twoWordsList.txt", "w")
+
+#firstWord = firstWordFile.readline()
+#firstWord = firstWord.strip()
+#secondWord = secondWordFile.readline()
+#secondWord = secondWord.strip()
+
+#commandList = []
+
+#command = firstWord + " " + secondWord
+#print(command)
+
+#commandList.append(command)
+
+#while (firstWord != "") :
+#	while (secondWord != "") :
+#		secondWord = secondWordFile.readline()
+#		secondWord = secondWord.strip()
+
+#		command = firstWord + " " + secondWord
+#		print(command)
+#
+#		commandList.append(command)
+
+#	print(commandList)
+#	testWordList(commandList, outputFile)
+
+#	frequency = 2500 # Set frequency to 2500 Hertz
+#	duration = 1000 # Set duration to 1000 ms = 1 second
+#	winsound.Beep(frequency, duration)
+
+#	firstWord = firstWordFile.readline()
+#	firstWord = firstWord.strip()
+
+#firstWordFile.close()
+#secondWordFile.close()
+#outputFile.close()
+
 # check first + second
 # keep grabbing 1000 of second word
 # keep checking first + second word
