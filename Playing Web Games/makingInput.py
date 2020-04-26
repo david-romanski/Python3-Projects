@@ -13,11 +13,11 @@ def createListFirstWord(firstWordFile) :
 		'0', '1', '2' , '3', '4', '5', '6', '7', '8', '9'
 		]
 
-#	FOR TESTING PURPOSES WE ARE ONLY DOING 3 CHARATERS OR 59,319 COMBINATIONS
+#	FOR TESTING PURPOSES WE ARE ONLY DOING 4 CHARATERS OR 2,313,441 COMBINATIONS
 	for char1 in range(0, len(allChars)):
 		for char2 in range(0, len(allChars)):
 			for char3 in range(0, len(allChars)):
-#				for char4 in range(0, len(allChars)):
+				for char4 in range(0, len(allChars)):
 #					for char5 in range(0, len(allChars)):
 #						for char6 in range(0, len(allChars)):
 #							for char7 in range(0, len(allChars)):
@@ -28,7 +28,7 @@ def createListFirstWord(firstWordFile) :
 												rawInput =  allChars[char1] 
 												rawInput += allChars[char2] 
 												rawInput += allChars[char3] 
-#												rawInput += allChars[char4] 
+												rawInput += allChars[char4] 
 #												rawInput += allChars[char5] 
 #												rawInput += allChars[char6]
 #												rawInput += allChars[char7]
