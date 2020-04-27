@@ -1,0 +1,167 @@
+'Borrowed' from website http://www.trs-80.com/wordpress/emulation-scott-adams/software-adventures-02/
+ S
+ Get Crackers
+ Get Sneakers
+ Get Rum
+ Go Stairs
+ Get Book
+ Go Passage
+ E
+ Get Torch
+ Get Duffel
+ Open Duffel
+ Drop Duffel
+ Get Matches
+ W
+ W
+ Read Book
+ Go Window
+ Say Yoho
+ Drop Sneakers
+ Drop Book
+ E
+ Go Shack
+ Give Rum
+ W
+ E
+ Go Path
+ Go Crack
+ Light Torch
+ Go Shed
+ Get Hammer
+ Get Wings
+ N
+ Go Crack
+ Unlight Torch
+ D
+ W
+ W
+ Drop Wings
+ Drop Matches
+ Drop Sack
+ Drop Torch
+ Get Book
+ Get Sneakers
+ Say Yoho
+ Go Window
+ Go Passage
+ E
+ Get Bottle
+ W
+ W
+ D
+ Get Nails
+ Get Rug
+ Drop Rug
+ Get Keys
+ Go Stairs
+ Go Window
+ Say Yoho
+ Drop Book
+ Drop Hammer
+ Drop Sneakers
+ Drop Nails
+ Get Wings
+ Go Lagoon
+ N
+ Get Water
+ Get Fish
+ S
+ S
+ Drop Wings
+ Get Torch
+ Get Matches
+ E
+ E
+ Light Torch
+ Go Cave
+ D
+ Throw Fish
+ Drop Bottle
+ Unlock Door
+ Go Hall
+ E
+ Go Shed
+ Get Shovel
+ N
+ Get Lumber
+ Get Sails
+ W
+ Go Pit
+ U
+ W
+ Unlight Torch
+ W
+ W
+ Drop Lumber
+ Drop Sails
+ Drop Torch
+ Drop Matches
+ Get Sack
+ E
+ Go Shack
+ Unlock Chest
+ Look Chest
+ Get Plans
+ Look Chest
+ Get Map
+ Get Parrot
+ W
+ W
+ Drop Keys
+ Watch Tide
+ Go Lagoon
+ Dig Anchor
+ Get Anchor
+ S
+ Drop Anchor
+ Build Ship
+ Drop Plans
+ Get Sneakers
+ Get Book
+ Say Yoho
+ Go Window
+ Go Passage
+ E
+ Wake Pirate
+ W
+ W
+ Go Window
+ Say Yoho
+ Drop Book
+ Drop Sneakers
+ Go Ship
+ Set Sail
+ Go Beach
+ DIG
+ S
+ E
+ Pace 30
+ Dig
+ Get Box
+ Drop Shovel
+ Go Monstery
+ Drop Parrot
+*** Treasure # 1 – Dubleons ***
+ Get Dubleons
+ W
+ W
+ Wake Pirate
+ N
+ Go Ship
+ Set Sail
+ Go Beach
+ Get Hammer
+ Open Box
+*** Treasure # 2 – Stamps ***
+ Get Stamps
+ Drop Hammer
+ Drop Box
+ Get Book
+ Get Sneakers
+ Say Yoho
+ Go Window
+ D
+ Drop Dubleons
+ Drop Stamps
+ Score
